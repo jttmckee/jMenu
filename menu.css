@@ -1,0 +1,77 @@
+/* Use a reset first */
+* {
+  box-sizing: border-box;
+}
+.menu-nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: 3px;
+  margin: 10px;
+}
+.hover-menu, .click-menu {
+  position: relative;
+}
+.hover-menu a, .click-menu a{
+  text-decoration: none;
+  display: block;
+  border: 1px solid gray;
+  padding: 5px;
+
+  /*Optional Styling */
+  font-family: 'Comic Sans MS', cursive;
+  color: #007;
+  border-radius: 3px;
+}
+
+.hover-menu ul, .click-menu ul {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+.hover-menu ul a, .click-menu ul  {
+  width:100%;
+}
+/*Optional down symbol */
+.hover-menu>a:after, .click-menu>a:after {
+  content:"▼";
+}
+
+.hover-menu:hover ul, .jmenu-active ul {
+  visibility: visible;
+}
+.menu-appear ul{
+  opacity: 0;
+  transition: none;
+  transform: translateY(-10px);
+}
+.menu-appear:hover ul, .menu-appear.jmenu-active ul {
+  transition: all 300ms ease-in-out;
+  opacity: 1;
+  transform: none;
+}
+
+.menu-unfurl ul{
+  opacity: 0;
+  transition: none;
+  transform: rotateX(90deg);
+  transform-origin: top;
+}
+.menu-unfurl:hover ul, .menu-unfurl.jmenu-active ul {
+  transition: all 300ms ease-in-out;
+  opacity: 1;
+  transform: none;
+}
+
+.menu-slide ul{
+  opacity: 0.5;
+  transition: none;
+  transform: translateX(-80px);
+
+}
+.menu-slide:hover ul, .menu-slide.jmenu-active ul  {
+  transition: all 250ms cubic-bezier(.18,.57,.83,1.4);
+  opacity: 1;
+  transform: none;
+}
