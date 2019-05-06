@@ -119,3 +119,8 @@ div.hover-menu a.hamburger:hover, div.jmenu.jmenu-active a.hamburger,
 .hover-menu:hover>a.hamburger {
   background-color: white;
 }
+
+/*Testing / Dev */
+p {
+  font-size: 2rem;
+}
