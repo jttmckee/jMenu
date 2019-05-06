@@ -110,8 +110,9 @@ a:hover, .jmenu-active>a, .hover-menu:hover>a {
 
 a.hamburger {
   background-image: url('./hamburger.svg');
-  width: 30px;
-  height: 25px;
+  background-size: cover;
+  width: 2.4rem;
+  height: 2rem;
   border:none;
 }
 div.hover-menu a.hamburger:hover, div.jmenu.jmenu-active a.hamburger,
