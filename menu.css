@@ -2,6 +2,11 @@
 * {
   box-sizing: border-box;
 }
+.combo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .menu-nav {
   display: grid;
   grid-auto-flow: column;
@@ -9,8 +14,25 @@
   grid-gap: 3px;
   margin: 10px;
 }
+.menu-nav.menu-nav-right {
+
+  justify-content: end;
+  justify-items: end;
+
+}
+.menu-nav.menu-nav-right .jmenu {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: end;
+  justify-items: right;
+}
+.menu-nav.menu-nav-right .jmenu ul {
+  grid-row: 2
+}
+
 .hover-menu, .click-menu {
   position: relative;
+  min-width: 100px;
 }
 .hover-menu a, .click-menu a{
   text-decoration: none;
@@ -20,8 +42,16 @@
 
   /*Optional Styling */
   font-family: 'Comic Sans MS', cursive;
-  color: #007;
+  color: #006;
+  background-color: white;
   border-radius: 3px;
+}
+a:hover, .jmenu-active>a, .hover-menu:hover>a {
+  /*Optional Styling */
+  background-color: #ECFFFF;
+  color: #003;
+  border-radius: 6px;
+  border-width: 3px;
 }
 
 .hover-menu ul, .click-menu ul {
@@ -34,9 +64,9 @@
   width:100%;
 }
 /*Optional down symbol */
-.hover-menu>a:after, .click-menu>a:after {
+/* .hover-menu>a:after, .click-menu>a:after {
   content:"▼";
-}
+} */
 
 .hover-menu:hover ul, .jmenu-active ul {
   visibility: visible;
@@ -74,4 +104,17 @@
   transition: all 250ms cubic-bezier(.18,.57,.83,1.4);
   opacity: 1;
   transform: none;
+}
+
+/*Hamburger menu */
+
+a.hamburger {
+  background-image: url('./hamburger.svg');
+  width: 30px;
+  height: 25px;
+  border:none;
+}
+div.hover-menu a.hamburger:hover, div.jmenu.jmenu-active a.hamburger,
+.hover-menu:hover>a.hamburger {
+  background-color: white;
 }

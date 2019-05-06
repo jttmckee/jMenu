@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+   width= "30px" height="25px">
+  <style>
+    rect.hamburger-line {
+      fill:#007;
+    }
+  </style>
+  <defs>
+    <rect class="hamburger-line" width="20" height = "3" id="line1"
+      rx="2" ry="2" x="5"/>
+  </defs>
+  <use xlink:href="#line1" x="5" y ="5" />
+  <use xlink:href="#line1" x="5" y ="12" />
+  <use xlink:href="#line1" x="5" y ="19" />
+</svg>
